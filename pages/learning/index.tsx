@@ -4,9 +4,8 @@ import Layout from "../../components/UI/Layout";
 const Learning: NextPage = () => {
   return (
     <>
-      <Layout title="Home">
+      <Layout title="Learning">
         <main>
-          <h1>LEARNING</h1>
         </main>
       </Layout>
     </>

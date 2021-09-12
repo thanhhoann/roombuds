@@ -1,14 +1,12 @@
 import type { NextPage } from "next";
 import Layout from "../components/UI/Layout";
+import Categories from "../components/Home/Categories";
 
 const Home: NextPage = () => {
-
   return (
     <>
       <Layout title="Home">
-        <main>
-          <h1>HOME</h1>
-        </main>
+        <Categories />
       </Layout>
     </>
   );
