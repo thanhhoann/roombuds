@@ -7,12 +7,15 @@ import {
   useRecoilState,
   useRecoilValue,
 } from "recoil";
+import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <RecoilRoot>
-      <Component {...pageProps} />
-    </RecoilRoot>
+    <ThemeProvider attribute="class">
+      <RecoilRoot>
+        <Component {...pageProps} />
+      </RecoilRoot>
+    </ThemeProvider>
   );
 }
 export default MyApp;
