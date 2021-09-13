@@ -24,7 +24,7 @@ export const SettingsSVG = (
 export const BellSVG = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-10 w-10"
+    className="h-20 w-20"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"

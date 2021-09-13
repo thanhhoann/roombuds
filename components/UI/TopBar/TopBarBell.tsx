@@ -34,7 +34,7 @@ export default function TopBarBell() {
       <Menu as="div" className="relative inline-block">
         <div>
           <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium">
-            {BellSVG}
+            <div>{BellSVG}</div>
             <span className="w-2 h-2 rounded-full dark:text-headline_dark bg-alert dark:bg-btn_dark"></span>
           </Menu.Button>
         </div>
