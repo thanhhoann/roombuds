@@ -12,6 +12,8 @@ export default function MyToggle() {
     enableDarkMode();
   };
 
+  if (enabled) console.log('Dark mode is ENABLED.')
+
   return (
     <>
       <div className="m-10 flex dark:text-background">
