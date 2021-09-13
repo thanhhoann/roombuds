@@ -1,11 +1,12 @@
 import { atom } from "recoil";
 
 export const sideBarItemsSelected = atom({
-  key: "sideBarItemsSelected", // unique ID (with respect to other atoms/selectors)
-  default: "Home", // default value (aka initial value)
+  key: "sideBarItemsSelected", 
+  default: "Home", 
 });
 
 export const darkModeEnabled = atom({
   key: "darkModeEnabled",
   default: false,
 });
+

@@ -3,12 +3,13 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   theme: {
     colors: {
-      background: "#fef6e4",
-      main: "#f3d2c1",
-      btn: "#f582ae",
-      btn_text: "#001858",
-      headline: "#001858",
-      para: "#172c66",
+      alert: "#e53170",
+      background: "#fffffe",
+      main: "#f2eef5",
+      btn: "#4fc4cf",
+      btn_text: "#181818",
+      headline: "#181818",
+      para: "#2e2e2e",
       divider: "#DFD5D5",
 
       background_dark: "#0f0e17",

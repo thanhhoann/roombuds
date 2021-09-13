@@ -4,6 +4,7 @@ import {
   BillsSVG,
   HomeSVG,
   LearningSVG,
+  BellSVG,
 } from "../../../assets/SideBarItemsSVG";
 import { sideBarItemsSelected } from "../../../atoms";
 import { SideBarItemsContainer } from "./SideBarItemsContainer";
@@ -20,7 +21,7 @@ export default function SideBarItems() {
           } rounded-md p-5 m-2 hover:bg-main dark:hover:bg-btn_dark cursor-pointer`}
           onClick={() => setSelected("Home")}
         >
-          <SideBarItemsContainer title="Home" link="/" svg={HomeSVG} />
+          <SideBarItemsContainer title="Home" svg={HomeSVG} />
         </div>
       </Link>
 
@@ -31,7 +32,7 @@ export default function SideBarItems() {
           } hover:bg-main dark:hover:bg-btn_dark rounded-md p-5 m-2 cursor-pointer`}
           onClick={() => setSelected("Contracts")}
         >
-          <SideBarItemsContainer title="Bills" link="/bills" svg={BillsSVG} />
+          <SideBarItemsContainer title="Bills" svg={BillsSVG} />
         </div>
       </Link>
 
@@ -42,11 +43,18 @@ export default function SideBarItems() {
           } hover:bg-main dark:hover:bg-btn_dark rounded-md p-5 m-2 cursor-pointer`}
           onClick={() => setSelected("Learning")}
         >
-          <SideBarItemsContainer
-            title="Learning"
-            link="/learning"
-            svg={LearningSVG}
-          />
+          <SideBarItemsContainer title="Learning" svg={LearningSVG} />
+        </div>
+      </Link>
+
+      <Link href="/notifications" passHref>
+        <div
+          className={`${
+            selected === "Notifications" && "bg-main font-bold dark:bg-btn_dark"
+          } rounded-md p-5 m-2 hover:bg-main dark:hover:bg-btn_dark cursor-pointer`}
+          onClick={() => setSelected("Notifications")}
+        >
+          <SideBarItemsContainer title="Notifications" svg={BellSVG} />
         </div>
       </Link>
     </>
