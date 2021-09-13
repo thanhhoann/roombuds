@@ -3,16 +3,10 @@ import { useRecoilState } from "recoil";
 import { darkModeEnabled } from "../../../atoms";
 import { moonSVG, sunSVG } from "../../../assets/SideBarDarkModeBtnSVG";
 import { useTheme } from "next-themes";
-import enableDarkMode from "../../../hooks/useDarkMode";
 
 export default function MyToggle() {
   const [enabled, setEnabled] = useRecoilState(darkModeEnabled);
   const { theme, setTheme } = useTheme();
-
-  const switchHandler = () => {
-    setEnabled(!enabled);
-  };
-
 
   return (
     <>
@@ -21,7 +15,10 @@ export default function MyToggle() {
 
         <Switch
           checked={enabled}
-          onChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+          onChange={() => {
+            setTheme(theme === "dark" ? "light" : "dark");
+            setEnabled(!enabled);
+          }}
           className={`${
             enabled ? "bg-background_dark" : "bg-main"
           } relative inline-flex items-center h-6 rounded-full w-16 border-2`}
