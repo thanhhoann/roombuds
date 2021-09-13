@@ -1,6 +1,6 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import { BellSVG } from "../../../assets/TopBar";
+import { BellSVG } from "../../../assets/SideBarItemsSVG";
 import Image from "next/image";
 import Link from "next/link";
 import { useRecoilState } from "recoil";
