@@ -25,9 +25,6 @@ const NotFound: NextPage = () => {
         <div className="w-1/2 h-screen">
           <Image src={notFound} width={700} height={700} />
         </div>
-        <object type="image/svg+xml" data="/Astronaut-01.svg">
-          svg-animation
-        </object>
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import { BellSVG, SettingsSVG } from "../../../assets/TopBar";
+import { SettingsSVG } from "../../../assets/TopBar";
 import TopBarUsername from "../TopBar/TopBarUsername";
 import TopBarAvatar from "./TopBarAvatar";
 import TopBarSearchBar from "./TopBarSearchBar";
