@@ -30,7 +30,7 @@ export default function TopBarBell() {
     useRecoilState(sideBarItemsSelected);
 
   return (
-    <div className="w-56 text-right fixed top-16 mr-10 z-50">
+    <div className="w-56 text-right fixed mr-10 z-50 col-start-4">
       <Menu as="div" className="relative inline-block">
         <div>
           <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium">
@@ -47,7 +47,7 @@ export default function TopBarBell() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute -right-3 w-56 mt-10 origin-top-right bg-background dark:bg-background_dark rounded-md shadow-lg  focus:outline-none">
+          <Menu.Items className="absolute -right-3 w-56 mt-3 origin-top-right bg-background dark:bg-background_dark rounded-md shadow-lg  focus:outline-none">
             <div className="px-1 py-1 ">
               {items.map((item, index) => (
                 <Menu.Item key={index}>
@@ -59,13 +59,6 @@ export default function TopBarBell() {
                           : ""
                       } group flex rounded-md w-full text-lg dark:text-headline_dark p-4`}
                     >
-                      <Image
-                        className="mr-5"
-                        src={`/${item.image}.svg`}
-                        width={50}
-                        height={50}
-                        alt="Category image"
-                      />
                       {item.message}
                     </button>
                   )}

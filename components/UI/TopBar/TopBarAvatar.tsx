@@ -5,9 +5,9 @@ export default function TopBarAvatar() {
   return (
     <>
       <Link href="/account" passHref>
-        <main className="border-headline dark:border-headline_dark border-2 rounded-md relative w-24 h-24 m-10 cursor-pointer">
+        <main className="relative w-24 h-24 cursor-pointer col-start-7 mt-5">
           <Image
-            src="https://avatars.dicebear.com/api/avataaars/hoan.svg"
+            src="https://avatars.dicebear.com/api/micah/hoanhtaoenu.svg"
             layout="fill"
             objectFit="fill"
             alt="Avatar"

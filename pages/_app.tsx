@@ -8,14 +8,19 @@ import {
   useRecoilValue,
 } from "recoil";
 import { ThemeProvider } from "next-themes";
+import { motion, AnimatePresence } from "framer-motion";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
   return (
-    <ThemeProvider attribute="class">
-      <RecoilRoot>
-        <Component {...pageProps} />
-      </RecoilRoot>
-    </ThemeProvider>
+    <AnimatePresence>
+      <motion.div key={router.route}>
+        <ThemeProvider attribute="class">
+          <RecoilRoot>
+            <Component {...pageProps} />
+          </RecoilRoot>
+        </ThemeProvider>
+      </motion.div>
+    </AnimatePresence>
   );
 }
 export default MyApp;
