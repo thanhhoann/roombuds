@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import {
   BillsSVG,
@@ -10,7 +11,12 @@ import { sideBarItemsSelected } from "../../../atoms";
 import { SideBarItemsContainer } from "./SideBarItemsContainer";
 
 export default function SideBarItems() {
+  const [mounted, setMounted] = useState(false);
   const [selected, setSelected] = useRecoilState(sideBarItemsSelected);
+
+  // only renders UI that uses the current theme when mounted ( fix hydration mismatch error )
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   return (
     <>
