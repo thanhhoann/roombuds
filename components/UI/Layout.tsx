@@ -9,7 +9,7 @@ export default function Layout({ title, children }: LayoutProps) {
     <>
       <Head>
         <title>{title} | Roombuds </title>
-        <link rel="icon" href="./house.svg" />
+        <link rel="icon" href="./r.svg" />
       </Head>
       <main className="bg-background font-inter w-screen h-screen grid grid-cols-10 grid-rows-6 dark:bg-background_dark">
         <SideBar />
