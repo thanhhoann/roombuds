@@ -6,8 +6,7 @@ export default function Categories() {
     <>
       <div className="flex flex-col text-para row-start-3 col-start-3 col-span-8">
         <main className="grid place-items-center laptop:flex">
-          <h1 className="font-extralight tracking-normal text-center laptop:text-left text-4xl laptop:text-5xl laptop:ml-20 dark:text-headline_dark flex">
-            <span className="mr-3">{CategoriesSVG}</span>
+          <h1 className="font-extrabold border-2 border-headline dark:border-headline_dark rounded-md p-6 tracking-normal text-center laptop:text-left text-4xl laptop:text-5xl laptop:ml-20 dark:text-headline_dark flex">
             Categories
           </h1>
         </main>
