@@ -2,10 +2,15 @@ module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class", // or 'media' or 'class'
   i18n: {
-    locales: ["en-US"],
+    locales: ["en-US", "vi-VN"],
     defaultLocale: "en-US",
   },
   theme: {
+    screens: {
+      tablet: "768px",
+      laptop: "1024px",
+      desktop: "1440px",
+    },
     colors: {
       alert: "#e53170",
       background: "#fffffe",

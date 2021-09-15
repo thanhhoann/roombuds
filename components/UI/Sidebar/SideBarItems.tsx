@@ -6,13 +6,16 @@ import {
   HomeSVG,
   LearningSVG,
   BellSVG,
+  AccountSVG,
 } from "../../../assets/SideBarItemsSVG";
 import { sideBarItemsSelected } from "../../../atoms";
 import { SideBarItemsContainer } from "./SideBarItemsContainer";
+import { useMedia } from "use-media";
 
 export default function SideBarItems() {
   const [mounted, setMounted] = useState(false);
   const [selected, setSelected] = useRecoilState(sideBarItemsSelected);
+  const tablet = useMedia({ minWidth: "768px" });
 
   // only renders UI that uses the current theme when mounted ( fix hydration mismatch error )
   useEffect(() => setMounted(true), []);
@@ -24,7 +27,7 @@ export default function SideBarItems() {
         <div
           className={`${
             selected === "Home" && "bg-main font-bold dark:bg-btn_dark"
-          } rounded-md p-5 m-2 hover:bg-main dark:hover:bg-btn_dark cursor-pointer`}
+          } rounded-md p-5 m-5 hover:bg-main dark:hover:bg-btn_dark cursor-pointer`}
           onClick={() => setSelected("Home")}
         >
           <SideBarItemsContainer title="Home" svg={HomeSVG} />
@@ -35,7 +38,7 @@ export default function SideBarItems() {
         <div
           className={` ${
             selected === "Contracts" && "bg-main font-bold dark:bg-btn_dark"
-          } hover:bg-main dark:hover:bg-btn_dark rounded-md p-5 m-2 cursor-pointer`}
+          } hover:bg-main dark:hover:bg-btn_dark rounded-md p-5 m-5 cursor-pointer`}
           onClick={() => setSelected("Contracts")}
         >
           <SideBarItemsContainer title="Bills" svg={BillsSVG} />
@@ -46,7 +49,7 @@ export default function SideBarItems() {
         <div
           className={`${
             selected === "Learning" && "bg-main font-bold dark:bg-btn_dark"
-          } hover:bg-main dark:hover:bg-btn_dark rounded-md p-5 m-2 cursor-pointer`}
+          } hover:bg-main dark:hover:bg-btn_dark rounded-md p-5 m-5 cursor-pointer`}
           onClick={() => setSelected("Learning")}
         >
           <SideBarItemsContainer title="Learning" svg={LearningSVG} />
@@ -57,12 +60,25 @@ export default function SideBarItems() {
         <div
           className={`${
             selected === "Notifications" && "bg-main font-bold dark:bg-btn_dark"
-          } rounded-md p-5 m-2 hover:bg-main dark:hover:bg-btn_dark cursor-pointer`}
+          } rounded-md p-5 m-5 hover:bg-main dark:hover:bg-btn_dark cursor-pointer`}
           onClick={() => setSelected("Notifications")}
         >
           <SideBarItemsContainer title="Notifications" svg={BellSVG} />
         </div>
       </Link>
+
+      {!tablet && (
+        <Link href="/account" passHref>
+          <div
+            className={`${
+              selected === "Account" && "bg-main font-bold dark:bg-btn_dark"
+            } rounded-md p-5 m-5 hover:bg-main dark:hover:bg-btn_dark cursor-pointer`}
+            onClick={() => setSelected("Account")}
+          >
+            <SideBarItemsContainer title="Account" svg={AccountSVG} />
+          </div>
+        </Link>
+      )}
     </>
   );
 }

@@ -24,7 +24,7 @@ export default function MyToggle() {
           <span
             className={`${
               theme === "dark" ? "translate-x-10" : "translate-x-1"
-            } inline-block w-4 h-4 transform duration-500 ease-linear bg-btn_text dark:bg-btn_dark rounded-full`}
+            } inline-block w-4 h-4 transform duration-200 ease-linear bg-btn_text dark:bg-btn_dark rounded-full`}
           />
         </Switch>
       </div>

@@ -1,7 +1,6 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { BellSVG } from "../../../assets/SideBarItemsSVG";
-import Image from "next/image";
 import Link from "next/link";
 import { useRecoilState } from "recoil";
 import { sideBarItemsSelected } from "../../../atoms";
@@ -30,7 +29,7 @@ export default function TopBarBell() {
     useRecoilState(sideBarItemsSelected);
 
   return (
-    <div className="w-56 text-right fixed mr-10 z-50 col-start-4">
+    <div className="laptop:w-56 text-right laptop:fixed laptop:mr-10 z-50 col-start-4 mr-10">
       <Menu as="div" className="relative inline-block">
         <div>
           <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium">

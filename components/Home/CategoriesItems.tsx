@@ -20,13 +20,13 @@ export default function CategoriesItems() {
 
   return (
     <>
-      <div className="flex w-full p-10">
+      <div className="grid auto-rows-max place-items-center laptop:flex desktop:flex-nowrap flex-wrap justify-center flex-row w-full p-10">
         {items.map((item, index) => (
           <Link key={index} href={`${item.link}`} passHref>
             <motion.main
               variants={list}
               animate="animate"
-              className="group rounded-md m-10 p-5 border-para dark:border-para_dark border-4 text-center grid grid-rows-4 w-60 h-64 cursor-pointer hover:border-btn dark:hover:border-btn_dark"
+              className="group rounded-md mb-8 tablet:m-10 p-5 border-para dark:border-para_dark border-4 text-center grid grid-rows-4 w-60 h-64 cursor-pointer hover:border-btn dark:hover:border-btn_dark"
             >
               <motion.div className="relative w-full h-2/3 row-start-1 row-span-3 mt-5">
                 <Image
@@ -37,7 +37,7 @@ export default function CategoriesItems() {
                 />
               </motion.div>
               <div className="flex flex-col justify-end row-start-4">
-                <h1 className="font-semibold text-2xl text-headline dark:text-headline_dark group-hover:text-btn dark:group-hover:text-btn_dark">
+                <h1 className="font-semibold text-2xl text-headline dark:text-headline_dark">
                   {item.name}
                 </h1>
               </div>
