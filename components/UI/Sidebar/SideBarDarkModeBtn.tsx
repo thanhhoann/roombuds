@@ -3,7 +3,7 @@ import { moonSVG, sunSVG } from "../../../assets/SideBarDarkModeBtnSVG";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 
-export default function MyToggle() {
+export default function SidebBarDarkModeBtn() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
