@@ -12,7 +12,9 @@ module.exports = {
       desktop: "1440px",
     },
     colors: {
+      svg: "#715DF2",
       alert: "#e53170",
+      white: "#f5f6fa",
       background: "#fffffe",
       main: "#f2eef5",
       btn: "#4fc4cf",

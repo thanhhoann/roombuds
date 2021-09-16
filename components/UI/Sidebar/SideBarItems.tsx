@@ -23,7 +23,7 @@ export default function SideBarItems() {
 
   return (
     <>
-      <Link href="/" passHref>
+      <Link href="/home" passHref>
         <div
           className={`${
             selected === "Home" && "bg-main font-bold dark:bg-btn_dark"
