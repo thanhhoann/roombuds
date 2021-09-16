@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 import { HStack } from "@chakra-ui/layout";
 import { PinInput, PinInputField } from "@chakra-ui/pin-input";
 import handShake from "../public/handshake.svg";
@@ -34,6 +35,10 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <Head>
+        <title>Login | RoomBuds</title>
+        <link rel="icon" href="./handshake.svg" />
+      </Head>
       <motion.div
         className="absolute w-screen h-screen"
         animate="animate"
@@ -56,7 +61,7 @@ const Home: NextPage = () => {
       </motion.div>
 
       <div className="grid place-items-center z-50 w-screen h-screen">
-        <div className="w-screen h-screen flex flex-col items-center justify-around z-50 mb-10">
+        <div className="w-screen h-screen flex flex-col items-center justify-around z-50 -mb-5">
           <div className="grid place-items-center">
             <Image src={handShake} width={100} height={100} />
             <h1 className="font-bold text-2xl laptop:text-3xl desktop:text-4xl font-inter mt-8 tablet:mt-14">
