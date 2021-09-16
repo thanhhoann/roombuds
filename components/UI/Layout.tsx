@@ -14,7 +14,7 @@ export default function Layout({ title, children }: LayoutProps) {
   return (
     <>
       <Head>
-        <title>{title} | Roombuds </title>
+        <title>{title} | RoomBuds </title>
         <link rel="icon" href="./handshake.svg" />
       </Head>
       <main className="bg-background font-inter w-screen h-auto laptop:h-screen laptop:grid grid-cols-10 grid-rows-6 dark:bg-background_dark">
