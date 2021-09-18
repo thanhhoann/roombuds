@@ -5,16 +5,16 @@ const Notifications: NextPage = () => {
   return (
     <>
       <Layout title="Notifications">
-        <section className="text-gray-400 bg-gray-900 body-font col-start-3 col-span-full row-start-2 row-span-3 laptop:ml-10">
+        <section className="text-headline dark:text-headline_dark bg-gray-900 body-font col-start-3 col-span-full row-start-2 row-span-3 laptop:ml-10">
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-wrap -mx-4 -my-8">
               <div className="py-8 px-4 lg:w-1/3">
                 <div className="h-full flex items-start">
                   <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-                    <span className="text-gray-400 pb-2 mb-2 border-b-2 border-gray-700">
+                    <span className="text-headline dark:text-headline_dark pb-2 mb-2 border-b-2 border-main">
                       Jul
                     </span>
-                    <span className="font-medium text-lg leading-none text-gray-300 title-font">
+                    <span className="font-medium text-lg leading-none text-headline dark:text-headline_dark title-font">
                       18
                     </span>
                   </div>
@@ -22,7 +22,7 @@ const Notifications: NextPage = () => {
                     <h2 className="tracking-widest text-xs title-font font-medium text-purple-400 mb-1">
                       CATEGORY
                     </h2>
-                    <h1 className="title-font text-xl font-medium text-white mb-3">
+                    <h1 className="title-font text-xl font-medium text-headline dark:text-headline_dark mb-3">
                       The 400 Blows
                     </h1>
                     <p className="leading-relaxed mb-5">
@@ -36,7 +36,7 @@ const Notifications: NextPage = () => {
                         className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"
                       />
                       <span className="flex-grow flex flex-col pl-3">
-                        <span className="title-font font-medium text-white">
+                        <span className="title-font font-medium text-headline dark:text-headline_dark">
                           Alper Kamu
                         </span>
                       </span>
@@ -47,10 +47,10 @@ const Notifications: NextPage = () => {
               <div className="py-8 px-4 lg:w-1/3">
                 <div className="h-full flex items-start">
                   <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-                    <span className="text-gray-400 pb-2 mb-2 border-b-2 border-gray-700">
+                    <span className="text-headline dark:text-headline_dark pb-2 mb-2 border-b-2 border-main">
                       Jul
                     </span>
-                    <span className="font-medium text-lg leading-none text-gray-300 title-font">
+                    <span className="font-medium text-lg leading-none text-headline dark:text-headline_dark title-font">
                       18
                     </span>
                   </div>
@@ -58,7 +58,7 @@ const Notifications: NextPage = () => {
                     <h2 className="tracking-widest text-xs title-font font-medium text-purple-400 mb-1">
                       CATEGORY
                     </h2>
-                    <h1 className="title-font text-xl font-medium text-white mb-3">
+                    <h1 className="title-font text-xl font-medium text-headline dark:text-headline_dark mb-3">
                       Shooting Stars
                     </h1>
                     <p className="leading-relaxed mb-5">
@@ -72,7 +72,7 @@ const Notifications: NextPage = () => {
                         className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"
                       />
                       <span className="flex-grow flex flex-col pl-3">
-                        <span className="title-font font-medium text-white">
+                        <span className="title-font font-medium text-headline dark:text-headline_dark">
                           Holden Caulfield
                         </span>
                       </span>
@@ -83,10 +83,10 @@ const Notifications: NextPage = () => {
               <div className="py-8 px-4 lg:w-1/3">
                 <div className="h-full flex items-start">
                   <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-                    <span className="text-gray-400 pb-2 mb-2 border-b-2 border-gray-700">
+                    <span className="text-headline dark:text-headline_dark pb-2 mb-2 border-b-2 border-main">
                       Jul
                     </span>
-                    <span className="font-medium text-lg leading-none text-gray-300 title-font">
+                    <span className="font-medium text-lg leading-none text-headline dark:text-headline_dark title-font">
                       18
                     </span>
                   </div>
@@ -94,7 +94,7 @@ const Notifications: NextPage = () => {
                     <h2 className="tracking-widest text-xs title-font font-medium text-purple-400 mb-1">
                       CATEGORY
                     </h2>
-                    <h1 className="title-font text-xl font-medium text-white mb-3">
+                    <h1 className="title-font text-xl font-medium text-headline dark:text-headline_dark mb-3">
                       Neptune
                     </h1>
                     <p className="leading-relaxed mb-5">
@@ -108,7 +108,7 @@ const Notifications: NextPage = () => {
                         className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"
                       />
                       <span className="flex-grow flex flex-col pl-3">
-                        <span className="title-font font-medium text-white">
+                        <span className="title-font font-medium text-headline dark:text-headline_dark">
                           Henry Letham
                         </span>
                       </span>
