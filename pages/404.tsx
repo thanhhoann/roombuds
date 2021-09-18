@@ -23,7 +23,7 @@ const NotFound: NextPage = () => {
           </Link>
         </div>
         <div className="w-1/2 h-screen">
-          <Image src={notFound} width={700} height={700} />
+          <Image src={notFound} width={700} height={700} alt="404 image"/>
         </div>
       </div>
     </>

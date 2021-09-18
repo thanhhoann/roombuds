@@ -6,6 +6,6 @@ export interface SideBarItemsContainerProps {
 }
 
 export interface LayoutProps {
-  title: string;
-  children: ReactNode;
+  title?: string;
+  children?: ReactNode;
 }
