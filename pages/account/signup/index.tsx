@@ -8,17 +8,22 @@ import AccountMainWrapper from "../../../components/Account/AccountMainWrapper";
 import AccountPinInput from "../../../components/Account/AccountPinInput";
 import AccountCTA from "../../../components/Account/AccountCTA";
 import AccountBottom from "../../../components/Account/AccountBottom";
+import { Input } from "@chakra-ui/input";
 
 const SignUp: NextPage = () => {
   return (
     <>
-      <AccountLayout title="Sign up">
+      <AccountLayout title="Sign Up">
         <AccountBackgroundImage />
 
         <AccountBodyWrapper>
           <AccountHeaderTitle title="Sign Up To " />
 
           <AccountMainWrapper>
+            <input
+              placeholder="Your name"
+              className="border-2 border-headline dark:border-btn_dark bg-background dark:bg-background_dark rounded-lg p-4 m-5 w-full"
+            />
             <AccountPinInput />
 
             <AccountCTA title="Sign Up" />
