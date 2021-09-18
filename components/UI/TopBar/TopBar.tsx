@@ -7,7 +7,7 @@ export default function TopBar() {
 
   return (
     <>
-      <div className="w-full row-start-1 col-start-3 col-span-full laptop:grid grid-cols-7">
+      <div className="w-full row-start-1 col-start-3 col-span-full laptop:grid grid-cols-7 desktop:-ml-10">
         <TopBarSearchBar />
         {laptop && <TopBarAvatar />}
       </div>

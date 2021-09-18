@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import {
-  BillsSVG,
+  FundsSVG,
   HomeSVG,
   LearningSVG,
   BellSVG,
@@ -34,14 +34,14 @@ export default function SideBarItems() {
         </div>
       </Link>
 
-      <Link href="/bills" passHref>
+      <Link href="/funds" passHref>
         <div
           className={` ${
-            selected === "Contracts" && "bg-main font-bold dark:bg-btn_dark"
+            selected === "Funds" && "bg-main font-bold dark:bg-btn_dark"
           } hover:bg-main dark:hover:bg-btn_dark rounded-md p-5 m-5 cursor-pointer`}
-          onClick={() => setSelected("Contracts")}
+          onClick={() => setSelected("Funds")}
         >
-          <SideBarItemsContainer title="Bills" svg={BillsSVG} />
+          <SideBarItemsContainer title="Funds" svg={FundsSVG} />
         </div>
       </Link>
 

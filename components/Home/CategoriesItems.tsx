@@ -4,8 +4,12 @@ import { motion } from "framer-motion";
 
 export default function CategoriesItems() {
   const items = [
-    { name: "Water", image: "water-drop", link: "/water" },
-    { name: "Electricity", image: "elec", link: "/electricity" },
+    {
+      name: "Electricity & Water",
+      image: "water-energy",
+      link: "/electricity-and-water",
+    },
+    { name: "Renting", image: "house", link: "/renting" },
     { name: "Households", image: "household", link: "/households" },
     { name: "Savings", image: "piggy-bank", link: "/savings" },
   ];
@@ -20,7 +24,7 @@ export default function CategoriesItems() {
 
   return (
     <>
-      <div className="grid auto-rows-max place-items-center laptop:flex desktop:flex-nowrap flex-wrap justify-center flex-row w-full p-10">
+      <div className="grid auto-rows-max place-items-center tablet:flex desktop:flex-nowrap flex-wrap justify-center flex-row w-full p-10">
         {items.map((item, index) => (
           <Link key={index} href={`${item.link}`} passHref>
             <motion.main

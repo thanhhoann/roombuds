@@ -17,7 +17,7 @@ export default function Layout({ title, children }: LayoutProps) {
         <title>{title} | RoomBuds </title>
         <link rel="icon" href="./handshake.svg" />
       </Head>
-      <main className="bg-background font-inter w-screen h-auto laptop:h-screen laptop:grid grid-cols-10 grid-rows-6 dark:bg-background_dark">
+      <main className="bg-background font-inter w-screen h-auto laptop:grid grid-cols-10 grid-rows-6 dark:bg-background_dark">
         {laptop ? (
           <SideBar />
         ) : (
@@ -43,7 +43,7 @@ export default function Layout({ title, children }: LayoutProps) {
             <motion.div
               className="mb-20 w-screen"
               animate={{
-                x: [-200, 0],
+                clipPath: [" circle(0% at 6% 8%)", " circle(100% at 50% 50%)"],
                 transition: { duration: 0.5, easing: [0.99, 0.43, 0.33, 1.86] },
               }}
               exit={{
@@ -56,7 +56,7 @@ export default function Layout({ title, children }: LayoutProps) {
           )}
         </AnimatePresence>
         {laptop && <TopBar />}
-        {children}
+        {!sideBarOpen && children}
       </main>
     </>
   );
