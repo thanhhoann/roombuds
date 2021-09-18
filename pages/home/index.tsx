@@ -6,93 +6,122 @@ const Home: NextPage = () => {
   return (
     <>
       <Layout title="Home">
-        <section className="text-gray-400 bg-gray-900 body-font col-start-3 row-start-2 row-span-4 col-span-full">
-          <div className="container px-5 py-24 mx-auto">
-            <div className="flex flex-col text-center w-full mb-20">
-              <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 textWhite">
-                    Updated 32 minutes ago
-              </h1>
+        <main className="row-start-2 row-span-6 col-start-3 col-span-full">
+          <div className="shadow-2xl px-4 py-6 bg-background dark:bg-background_dark relative m-10 rounded-lg border-2 dark:border-btn_dark">
+            <p className="text-sm w-max text-gray-700 dark:text-white font-semibold border-b border-gray-200">
+              Total Bills
+            </p>
+            <div className="flex items-end space-x-2 my-6">
+              <p className="text-5xl text-black dark:text-white font-bold">
+                12
+              </p>
+              <span className="text-green-500 text-xl font-bold flex items-center">
+                <svg
+                  width="20"
+                  fill="currentColor"
+                  height="20"
+                  className="h-3"
+                  viewBox="0 0 1792 1792"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M1675 971q0 51-37 90l-75 75q-38 38-91 38-54 0-90-38l-294-293v704q0 52-37.5 84.5t-90.5 32.5h-128q-53 0-90.5-32.5t-37.5-84.5v-704l-294 293q-36 38-90 38t-90-38l-75-75q-38-38-38-90 0-53 38-91l651-651q35-37 90-37 54 0 91 37l651 651q37 39 37 91z"></path>
+                </svg>
+                22%
+              </span>
             </div>
-            <div className="flex flex-wrap -m-4 text-center">
-              <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                <div className="border-2 border-gray-800 px-4 py-6 roundedLg">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="text-purple-400 w-12 h-12 mb-3 inline-block"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M8 17l4 4 4-4m-4-5v9"></path>
-                    <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
-                  </svg>
-                  <h2 className="title-font font-medium text-3xl textWhite">
-                    2.7K
-                  </h2>
-                  <p className="leading-relaxed">Downloads</p>
+            <div className="dark:text-white">
+              <div className="flex items-center pb-2 mb-2 text-sm space-x-12 md:space-x-24 justify-between border-b border-gray-200">
+                {/* TODO: dien va nuoc tinh rieng hay chung ? */}
+                <p>Electricity & Water</p>
+                <div className="flex items-end text-xs">
+                  34
+                  <span className="flex items-center">
+                    <svg
+                      width="20"
+                      fill="currentColor"
+                      height="20"
+                      className="h-3 text-green-500"
+                      viewBox="0 0 1792 1792"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1675 971q0 51-37 90l-75 75q-38 38-91 38-54 0-90-38l-294-293v704q0 52-37.5 84.5t-90.5 32.5h-128q-53 0-90.5-32.5t-37.5-84.5v-704l-294 293q-36 38-90 38t-90-38l-75-75q-38-38-38-90 0-53 38-91l651-651q35-37 90-37 54 0 91 37l651 651q37 39 37 91z"></path>
+                    </svg>
+                    22%
+                  </span>
                 </div>
               </div>
-              <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                <div className="border-2 border-gray-800 px-4 py-6 roundedLg">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="text-purple-400 w-12 h-12 mb-3 inline-block"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
-                  </svg>
-                  <h2 className="title-font font-medium text-3xl textWhite">
-                    1.3K
-                  </h2>
-                  <p className="leading-relaxed">Users</p>
+              <div className="flex items-center mb-2 pb-2 text-sm space-x-12 md:space-x-24 justify-between border-b border-gray-200">
+                <p>Embedded form</p>
+                <div className="flex items-end text-xs">
+                  13
+                  <span className="flex items-center">
+                    <svg
+                      width="20"
+                      fill="currentColor"
+                      height="20"
+                      className="h-3 text-green-500"
+                      viewBox="0 0 1792 1792"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1675 971q0 51-37 90l-75 75q-38 38-91 38-54 0-90-38l-294-293v704q0 52-37.5 84.5t-90.5 32.5h-128q-53 0-90.5-32.5t-37.5-84.5v-704l-294 293q-36 38-90 38t-90-38l-75-75q-38-38-38-90 0-53 38-91l651-651q35-37 90-37 54 0 91 37l651 651q37 39 37 91z"></path>
+                    </svg>
+                    12%
+                  </span>
                 </div>
               </div>
-              <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                <div className="border-2 border-gray-800 px-4 py-6 roundedLg">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="text-purple-400 w-12 h-12 mb-3 inline-block"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M3 18v-6a9 9 0 0118 0v6"></path>
-                    <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"></path>
-                  </svg>
-                  <h2 className="title-font font-medium text-3xl textWhite">74</h2>
-                  <p className="leading-relaxed">Files</p>
-                </div>
-              </div>
-              <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                <div className="border-2 border-gray-800 px-4 py-6 roundedLg">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="text-purple-400 w-12 h-12 mb-3 inline-block"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  </svg>
-                  <h2 className="title-font font-medium text-3xl textWhite">46</h2>
-                  <p className="leading-relaxed">Places</p>
+              <div className="flex items-center text-sm space-x-12 md:space-x-24 justify-between">
+                <p>New visitor</p>
+                <div className="flex items-end text-xs">
+                  45
+                  <span className="flex items-center">
+                    <svg
+                      width="20"
+                      fill="currentColor"
+                      height="20"
+                      className="h-3 text-green-500"
+                      viewBox="0 0 1792 1792"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1675 971q0 51-37 90l-75 75q-38 38-91 38-54 0-90-38l-294-293v704q0 52-37.5 84.5t-90.5 32.5h-128q-53 0-90.5-32.5t-37.5-84.5v-704l-294 293q-36 38-90 38t-90-38l-75-75q-38-38-38-90 0-53 38-91l651-651q35-37 90-37 54 0 91 37l651 651q37 39 37 91z"></path>
+                    </svg>
+                    41%
+                  </span>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+
+          <div className="md:p-8 m-5 p-6 bg-background shadow-2xl rounded-lg flex justify-between dark:bg-background_dark md:items-center md:flex-row flex-col gap-12 border-2 dark:border-btn_dark">
+            <div>
+              <span className="text-bold text-headline dark:text-headline_dark dark:text-gray-400 block">
+                Total Savings
+              </span>
+              <span className="text-headline dark:text-headline_dark text-4xl md:text-5xl mt-2 block">
+                999,999,999
+              </span>
+            </div>
+            <div className="self-end">
+              <div className="md:text-right text-left md:block">
+                <p className="text-xl md:mb-2 mb-0 dark:text-gray-100 flex items-center increase">
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    className="h-6 w-6 text-red-500 mr-2"
+                    viewBox="0 0 1792 1792"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M491 1536l91-91-235-235-91 91v107h128v128h107zm523-928q0-22-22-22-10 0-17 7l-542 542q-7 7-7 17 0 22 22 22 10 0 17-7l542-542q7-7 7-17zm-54-192l416 416-832 832h-416v-416zm683 96q0 53-37 90l-166 166-416-416 166-165q36-38 90-38 53 0 91 38l235 234q37 39 37 91z"></path>
+                  </svg>
+                  1.2% increase
+                </p>
+              </div>
+              <p className="text-lg text-gray-600 md:text-right text-left dark:text-gray-400 md:block inline-block md:mb-0">
+                from yesterday (+906,503)
+              </p>
+            </div>
+          </div>
+        </main>
       </Layout>
     </>
   );

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TopBar from "../UI/TopBar/TopBar";
 import SideBar from "../UI/Sidebar/SideBar";
 import { LayoutProps } from "../../types";
@@ -7,10 +7,14 @@ import useMedia from "use-media";
 import { ThreeSlashes, X_Button } from "../../assets/TopBar";
 import { AnimatePresence, motion } from "framer-motion";
 import TopBarBell from "./TopBar/TopBarBell";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Layout({ title, children }: LayoutProps) {
   const laptop = useMedia({ minWidth: "1024px" });
   const [sideBarOpen, setSideBarOpen] = useState(false);
+  useEffect(() => AOS.init(), []);
+
   return (
     <>
       <Head>
@@ -41,10 +45,10 @@ export default function Layout({ title, children }: LayoutProps) {
         >
           {sideBarOpen && (
             <motion.div
-              className="mb-20 w-screen"
+              className="w-screen"
               animate={{
-                clipPath: [" circle(0% at 6% 8%)", " circle(100% at 50% 50%)"],
-                transition: { duration: 0.5, easing: [0.99, 0.43, 0.33, 1.86] },
+                clipPath: ["circle(0% at 4% 4%)", "circle(150.2% at 4% 4%)"],
+                transition: { duration: 0.7, easing: [0.99, 0.43, 0.33, 1.86] },
               }}
               exit={{
                 opacity: [1, 0],
