@@ -41,6 +41,7 @@ export default function AccountForms({ title }: LayoutProps) {
       if (result?.message === "AUTHENTICATED") {
         setIsAuth(true);
         router.replace("/");
+        setAuthPageGlobal("Sign In");
       } else if (result?.message === "USER NOT FOUND") {
         toast({
           title: "Account doesn't exist",
