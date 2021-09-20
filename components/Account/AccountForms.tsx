@@ -36,6 +36,8 @@ export default function AccountForms({ title }: LayoutProps) {
         result = await userSignIn(userInput.password);
       }
 
+      if (result) console.log("REQUEST SENT !");
+
       if (result?.message === "AUTHENTICATED") {
         setIsAuth(true);
         router.replace("/");
