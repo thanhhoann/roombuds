@@ -2,5 +2,6 @@
 🚀 https://roombuds.vercel.app/
 
 # Screen Shot
-<img width="1436" alt="Screen Shot 2021-09-16 at 11 50 08" src="https://user-images.githubusercontent.com/74335400/133551381-fa686778-2fa0-4ce8-b56a-d4192c4957a4.png">
 
+
+<img width="1439" alt="Screen Shot 2021-09-18 at 23 12 15" src="https://user-images.githubusercontent.com/74335400/133895313-30f3ec24-cdf8-4229-ae5b-6c2e93d40bc8.png">
