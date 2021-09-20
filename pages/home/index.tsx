@@ -1,11 +1,16 @@
 import type { NextPage } from "next";
 import Layout from "../../components/UI/Layout";
 import Categories from "../../components/Home/Categories";
+import { useControls } from "leva";
 
 const Home: NextPage = () => {
+  const { name, aNumber } = useControls({ name: "World", aNumber: 0 });
   return (
     <>
       <Layout title="Home">
+        <div>
+          Hey {name}, hello! {aNumber}
+        </div>
         <main className="row-start-2 row-span-6 col-start-3 col-span-full">
           <div className="shadow-2xl px-4 py-6 bg-background dark:bg-background_dark relative m-10 rounded-lg border-2 dark:border-btn_dark">
             <p className="text-sm w-max text-gray-700 dark:text-white font-semibold border-b border-gray-200">

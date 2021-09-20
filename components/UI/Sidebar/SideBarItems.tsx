@@ -15,7 +15,7 @@ import { useMedia } from "use-media";
 export default function SideBarItems() {
   const [mounted, setMounted] = useState(false);
   const [selected, setSelected] = useRecoilState(sideBarItemsSelected);
-  const tablet = useMedia({ minWidth: "768px" });
+  const laptop = useMedia({ minWidth: "1024px" });
 
   // only renders UI that uses the current theme when mounted ( fix hydration mismatch error )
   useEffect(() => setMounted(true), []);
@@ -67,7 +67,7 @@ export default function SideBarItems() {
         </div>
       </Link>
 
-      {!tablet && (
+      {!laptop && (
         <Link href="/account" passHref>
           <div
             className={`${

@@ -8,22 +8,22 @@ import AccountMainWrapper from "../../../components/Account/AccountMainWrapper";
 import AccountBottom from "../../../components/Account/AccountBottom";
 import AccountForms from "../../../components/Account/AccountForms";
 
-const SignUp: NextPage = () => {
+const Login: NextPage = () => {
   return (
     <>
-      <AccountLayout title="Sign Up">
+      <AccountLayout title="Sign In">
         <AccountBackgroundImage />
 
         <AccountBodyWrapper>
-          <AccountHeaderTitle title="Sign Up To " />
+          <AccountHeaderTitle title="Sign In To " />
 
           <AccountMainWrapper>
-            <AccountForms title="Sign Up" />
+            <AccountForms title="Sign In" />
 
             <AccountBottom
-              title="Sign In"
-              supportNavigation="Already have an account ? &nbsp;"
-              page="Sign Up"
+              title="Sign Up"
+              supportNavigation="Don't have an account ? "
+              page="Sign In"
             />
             <SidebBarDarkModeBtn />
           </AccountMainWrapper>
@@ -33,4 +33,4 @@ const SignUp: NextPage = () => {
   );
 };
 
-export default SignUp;
+export default Login;

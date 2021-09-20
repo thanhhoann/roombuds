@@ -6,10 +6,10 @@ export default function AccountHeaderTitle({ title }: LayoutProps) {
   return (
     <>
       <div className="grid place-items-center">
-        <Image src={handShake} width={100} height={100} alt="Header image"/>
-        <h1 className="font-bold text-2xl laptop:text-3xl desktop:text-4xl font-inter mt-8 tablet:mt-14">
+        <Image src={handShake} width={100} height={100} alt="Header image" />
+        <h1 className="font-bold text-2xl laptop:text-3xl desktop:text-4xl font-inter mt-8 tablet:mt-14 dark:text-headline_dark">
           {title}
-          <span className="font-pacifico p-1 rounded-lg dark:bg-background_dark">
+          <span className="font-pacifico p-1 rounded-lg dark:text-headline_dark">
             RoomBuds
           </span>
         </h1>

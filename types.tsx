@@ -9,3 +9,8 @@ export interface LayoutProps {
   title?: string;
   children?: ReactNode;
 }
+
+export interface AuthProps {
+  username?: string;
+  password: number;
+}

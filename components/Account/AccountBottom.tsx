@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { useRecoilState } from "recoil";
+import { authPageSeleted } from "../../atoms";
 
 interface AccountProps {
   page: string;
@@ -11,6 +13,7 @@ export default function AccountBottom({
   supportNavigation,
   title,
 }: AccountProps) {
+  const [authPageGlobal, setAuthPageGlobal] = useRecoilState(authPageSeleted);
   return (
     <>
       {page === "Sign In" && (
@@ -24,7 +27,12 @@ export default function AccountBottom({
       <div className="text-main font-medium mt-5 tablet:text-headline desktop:text-xl dark:text-headline_dark">
         {supportNavigation}
         <Link href={`${page === "Sign In" ? "/account/signup" : "/"}`} passHref>
-          <span className="font-bold cursor-pointer hover:underline">
+          <span
+            className="font-bold cursor-pointer hover:underline"
+            onClick={() =>
+              setAuthPageGlobal(`${page === "Sign In" ? "Sign Up" : "Sign In"}`)
+            }
+          >
             {title}
           </span>
         </Link>
