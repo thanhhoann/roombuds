@@ -34,6 +34,7 @@
     "next": "11.1.2",
     "next-auth": "^3.29.0",
     "next-compose-plugins": "^2.2.1",
+    "next-connect": "^0.10.2",
     "next-images": "^1.8.1",
     "next-themes": "^0.0.15",
     "react": "17.0.2",
@@ -43,6 +44,7 @@
     "recoil": "^0.4.1",
     "recoil-persist": "^3.0.0",
     "roughjs": "^4.4.1",
+    "swr": "^1.0.1",
     "use-media": "^1.4.0"
   },
   "devDependencies": {
