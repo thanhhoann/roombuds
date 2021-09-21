@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { LayoutProps } from "../../types";
 import { isAuthenticated } from "../../atoms";
 import { useToast } from "@chakra-ui/react";
-import { createUser, userSignIn } from "../../lib/auth";
+import { createUser, updateUser, userSignIn } from "../../lib/auth";
 import AccountAuthPageButton from "./AccountAuthPageButton";
 
 export default function AccountForms({ title }: LayoutProps) {
@@ -46,6 +46,9 @@ export default function AccountForms({ title }: LayoutProps) {
         result = await createUser(username, password);
       } else if (authPageGlobal === "Sign In") {
         result = await userSignIn(password);
+      } else if (authPageGlobal === "Recovery") {
+        console.log(username);
+        result = await updateUser(username, password);
       }
 
       if (result?.message === "AUTHENTICATED") {
@@ -61,7 +64,7 @@ export default function AccountForms({ title }: LayoutProps) {
         });
       } else if (result?.message === "ALREADY EXISTS") {
         toast({
-          title: "Account already existed",
+          title: "Username or password already existed",
           status: "warning",
           duration: 3000,
           isClosable: true,
@@ -75,7 +78,7 @@ export default function AccountForms({ title }: LayoutProps) {
 
   return (
     <>
-      {authPageGlobal === "Sign Up" && (
+      {(authPageGlobal === "Sign Up" || authPageGlobal === "Recovery") && (
         <input
           value={userInput.username}
           onChange={(e) =>

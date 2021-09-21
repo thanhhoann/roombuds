@@ -18,10 +18,6 @@ const Recovery: NextPage = () => {
           <AccountHeaderTitle title="Recovery for " />
 
           <AccountMainWrapper>
-            <input
-              placeholder="Your name"
-              className="border-2 border-headline dark:border-btn_dark bg-background dark:bg-background_dark rounded-lg p-4 m-5 w-full"
-            />
             <AccountForms title="Recovery" />
 
             <AccountBottom

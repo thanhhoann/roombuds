@@ -1,4 +1,6 @@
 import { FingerPrintSVG } from "../../assets/HomePage";
+import { useRecoilState } from "recoil";
+import { authPageSeleted, sideBarItemsSelected } from "../../atoms";
 
 interface AccountAuthPageButtonProps {
   submitHandler: (arg: any) => void;
@@ -8,6 +10,11 @@ export default function AccountAuthPageButton({
   submitHandler,
   title,
 }: AccountAuthPageButtonProps) {
+  const [authPageGlobal, setAuthPageGlobal] = useRecoilState(authPageSeleted);
+  const [selected, setSelected] = useRecoilState(sideBarItemsSelected);
+  setAuthPageGlobal(title);
+  setSelected("Home");
+
   return (
     <>
       <button

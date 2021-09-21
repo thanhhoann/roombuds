@@ -12,12 +12,16 @@ export default async function handler(req: any, res: any) {
   const client = await connectToDatabase();
   const db = client.db();
 
+  const isUsernameAlreadyExist = await db
+    .collection("users")
+    .findOne({ username: username });
+
   const isPasswordAlreadyExist = await db
     .collection("users")
     .findOne({ password: password });
 
   let isCreated;
-  if (!isPasswordAlreadyExist) {
+  if (!isPasswordAlreadyExist || !isUsernameAlreadyExist) {
     isCreated = await db.collection("users").insertOne({
       username: username,
       password: password,
