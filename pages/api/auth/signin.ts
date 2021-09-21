@@ -18,6 +18,6 @@ export default async function handler(req: any, res: any) {
   client.close();
 
   res.status(201).json({
-    message: isFound ? "AUTHENTICATED" : "USER NOT FOUND",
+    message: isFound ? "AUTHENTICATED" : "NOT FOUND",
   });
 }

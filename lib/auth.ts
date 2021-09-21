@@ -1,3 +1,4 @@
+import { hash } from "bcryptjs";
 export async function createUser(username: string, password: string) {
   const res = await fetch("/api/auth/signup", {
     method: "POST",

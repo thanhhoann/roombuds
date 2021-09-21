@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { authPageSeleted } from "../../atoms";
 import { useRouter } from "next/router";
-import { FingerPrintSVG } from "../../assets/HomePage";
 import { LayoutProps } from "../../types";
 import { isAuthenticated } from "../../atoms";
 import { useToast } from "@chakra-ui/react";
 import { createUser, userSignIn } from "../../lib/auth";
+import AccountAuthPageButton from "./AccountAuthPageButton";
 
 export default function AccountForms({ title }: LayoutProps) {
   const router = useRouter();
@@ -26,26 +26,35 @@ export default function AccountForms({ title }: LayoutProps) {
 
   const arr = [1, 2, 3, 4];
 
+  const { username, password } = userInput;
+
   const submitHandler = async (e: any) => {
     e.preventDefault();
     try {
       let result;
       if (authPageGlobal === "Sign Up") {
-        result = await createUser(userInput.username, userInput.password);
+        if (username.trim().length < 4 || password.length < 4) {
+          toast({
+            title: "Your name and password must be at least 4 letters",
+            status: "warning",
+            duration: 3000,
+            isClosable: true,
+          });
+          setUserInput({ username: "", password: "" });
+          return;
+        }
+        result = await createUser(username, password);
       } else if (authPageGlobal === "Sign In") {
-        result = await userSignIn(userInput.password);
+        result = await userSignIn(password);
       }
-
-      if (result) console.log("REQUEST SENT !");
 
       if (result?.message === "AUTHENTICATED") {
         setIsAuth(true);
         router.replace("/");
         setAuthPageGlobal("Sign In");
-      } else if (result?.message === "USER NOT FOUND") {
+      } else if (result?.message === "NOT FOUND") {
         toast({
           title: "Account doesn't exist",
-          description: "Create a new account now",
           status: "error",
           duration: 3000,
           isClosable: true,
@@ -53,8 +62,7 @@ export default function AccountForms({ title }: LayoutProps) {
       } else if (result?.message === "ALREADY EXISTS") {
         toast({
           title: "Account already existed",
-          description: "Use a different password",
-          status: "error",
+          status: "warning",
           duration: 3000,
           isClosable: true,
         });
@@ -105,14 +113,7 @@ export default function AccountForms({ title }: LayoutProps) {
           ))}
         </PinInput>
       </HStack>
-      <button
-        type="submit"
-        className="px-16 text-xl py-3 rounded-lg mt-8 desktop:mt-14 mb-5 desktop:mb-10 flex bg-svg text-white border-4 border-white hover:border-headline dark:border-background_dark dark:hover:border-btn_dark"
-        onClick={submitHandler}
-      >
-        <span className="mr-2">{FingerPrintSVG}</span>
-        {title}
-      </button>
+      <AccountAuthPageButton submitHandler={submitHandler} title={title} />
     </>
   );
 }
